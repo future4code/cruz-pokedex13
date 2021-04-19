@@ -13,8 +13,8 @@ const HeaderStyled = styled.div `
     'Open Sans', 'Helvetica Neue', sans-serif;
 `
 const LogoStyled = styled.img `
-    width:10vw;
-    height:7vh;
+    width:12vw;
+    height:9vh;
     margin-top:10px;
     margin-left:64px;
 `
@@ -22,7 +22,7 @@ const DivButton = styled.div `
     display:flex;
     justify-content:space-between;
     margin-top:16px;
-    margin-right:64px;
+    margin-right:70px;
     width:20vw;
     height:7vh;
 `
@@ -35,6 +35,7 @@ const ButtonHome = styled.button `
     border:none;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
     'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
     &:active{
         color:#322d99;
     }
@@ -48,6 +49,7 @@ const ButtonPokedex = styled.button `
     outline:none;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
     'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
     &:active{
         color:#322d99;
     }
@@ -56,14 +58,9 @@ const PokeballBox =styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
-    /* box-sizing: border-box;
-    border: solid 1px #ccc; */
-    border-radius: 0;
-    /* margin-right: 5px;
-    margin-bottom: 5px; */
-    background-color: #ee5253;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
     cursor: pointer;
     *,
     *:after,
@@ -75,15 +72,10 @@ const PokeballIcon = styled.div `
     position: absolute;
     width: 2em;
     height: 2em;
-    
     background-color: transparent;
     border: .2em solid #333;
-    
     border-radius: 50%;
-    /* background-image: linear-gradient(0deg, #fff 0%); */
-    
     transition: .5s ease transform;
-    
     &:hover {
         transform: rotate(360deg);
     }
@@ -121,11 +113,13 @@ const Header = () => {
     <HeaderStyled >
         <LogoStyled src={Logo}/>
         <DivButton>
+            {/* <div> */}
+                <PokeballBox>
+                    <PokeballIcon></PokeballIcon>
+                </PokeballBox>
+                <ButtonPokedex>Minha Pokédex</ButtonPokedex>
+            {/* </div> */}
             <ButtonHome>Home</ButtonHome>
-            <ButtonPokedex>Minha Pokédex</ButtonPokedex>
-            <PokeballBox>
-                <PokeballIcon></PokeballIcon>
-            </PokeballBox>
         </DivButton>
     </HeaderStyled>
 ) 
