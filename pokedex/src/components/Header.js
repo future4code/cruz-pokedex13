@@ -41,6 +41,7 @@ const ButtonHome = styled.button `
     }
 `
 const ButtonPokedex = styled.button `
+    width:24vw;
     background-color:transparent;
     color:white;
     font-weight:500;
@@ -79,21 +80,18 @@ const PokeballIcon = styled.div `
     &:hover {
         transform: rotate(360deg);
     }
-    
     &:before,
     &:after {
         content: "";
         alt: attr(data-alt);
         position: absolute;
     }
-    
     &:before {
         top: calc(50% - 0.1em);
         width: 100%;
         height: 0.2em;
         background-color: #333;
     }
-    
     &:after {
         width: .8em;
         height: .8em;
@@ -105,7 +103,10 @@ const PokeballIcon = styled.div `
         color: #fff;
         background-color: #fff;
     }
-    
+`
+const ButtonPokeball = styled.div `
+    display:flex;
+
 `
 // --------------------------------------------------------------------------------------------------------------
 const Header = () => {
@@ -113,12 +114,13 @@ const Header = () => {
     <HeaderStyled >
         <LogoStyled src={Logo}/>
         <DivButton>
-            {/* <div> */}
                 <PokeballBox>
                     <PokeballIcon></PokeballIcon>
                 </PokeballBox>
-                <ButtonPokedex>Minha Pokédex</ButtonPokedex>
-            {/* </div> */}
+                <ButtonPokedex>Minha Pokédex
+                    {/* <ButtonPokeball> */}
+                    {/* </ButtonPokeball> */}
+                </ButtonPokedex>
             <ButtonHome>Home</ButtonHome>
         </DivButton>
     </HeaderStyled>
