@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "bf8b3e64-5fb4-4375-a00a-10d7d7eaa114",
+		"name": "Pokedex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Pokemons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Pegar Pokemons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
