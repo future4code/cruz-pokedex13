@@ -1,15 +1,16 @@
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import PokemonCard from '../components/pokemonCard/pokemonCard'
 import styled from 'styled-components'
+import GlobalStateContext from '../GlobalState/GlobalContaxt';
 
 
 const HomePage = () => {
-  const [pokeList] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+  
   const [show, setShow] = useState(true);
-
+  const {pokemons} = useContext(GlobalStateContext);
 
   const estadoshow = () => {
     show ? setShow(false) : setShow(true)
@@ -17,8 +18,8 @@ const HomePage = () => {
 
   const screen = (
     show ? <PokeListContainer>
-      {pokeList.map((poke) => {
-        return <PokemonCard />
+      {pokemons.map((pokemon) => {
+        return <PokemonCard key={pokemon.name} pokemon={pokemon}/>
       })}
     </PokeListContainer> : <div>Carregando ... </div>
   )
@@ -31,9 +32,6 @@ const HomePage = () => {
       {screen}
 
       <Footer />
-
-
-
 
     </>
   )
