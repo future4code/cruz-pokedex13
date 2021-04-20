@@ -7,33 +7,33 @@ import styled from 'styled-components'
 
 
 const HomePage = () => {
-  const [pokeList] = useState([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]);
-  const[show, setShow] = useState(true);
+  const [pokeList] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
+  const [show, setShow] = useState(true);
 
 
-const estadoshow = () => {
-  show ? setShow(false) : setShow(true)
-}
+  const estadoshow = () => {
+    show ? setShow(false) : setShow(true)
+  }
 
   const screen = (
-     show ? <PokeListContainer>
-             {pokeList.map((poke) => {
-                return <PokemonCard  /> 
-             })}
-      </PokeListContainer> : <div>Carregando ... </div>
+    show ? <PokeListContainer>
+      {pokeList.map((poke) => {
+        return <PokemonCard />
+      })}
+    </PokeListContainer> : <div>Carregando ... </div>
   )
 
   return (
     <>
 
-<Header/>
-<button onClick={()=>estadoshow()}>ENTRA/SAI</button>
+      <Header />
+      <button onClick={() => estadoshow()}>ENTRA/SAI</button>
       {screen}
 
-<Footer/>
-      
-     
-      
+      <Footer />
+
+
+
 
     </>
   )
@@ -54,9 +54,5 @@ export const PokeListContainer = styled.div`
   grid-row-gap:7vh;
   overflow:auto;
   height:95vh;
-
- 
-
-  
 
 `

@@ -1,8 +1,9 @@
 import React from "react";
 import styled from 'styled-components'
 import Logo from '../img/logo.png'
+import { Link } from 'react-router-dom'
 
-const HeaderStyled = styled.div `
+const HeaderStyled = styled.div`
     display:flex;
     justify-content:space-between;
     background-color:#ee5253;
@@ -12,13 +13,13 @@ const HeaderStyled = styled.div `
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
     'Open Sans', 'Helvetica Neue', sans-serif;
 `
-const LogoStyled = styled.img `
+const LogoStyled = styled.img`
     width:12vw;
     height:9vh;
     margin-top:10px;
     margin-left:64px;
 `
-const DivButton = styled.div `
+const DivButton = styled.div`
     display:flex;
     justify-content:space-between;
     margin-top:16px;
@@ -26,7 +27,7 @@ const DivButton = styled.div `
     width:20vw;
     height:7vh;
 `
-const ButtonHome = styled.button `
+const ButtonHome = styled.button`
     background-color:transparent;
     color:white;
     font-weight:500;
@@ -40,7 +41,7 @@ const ButtonHome = styled.button `
         color:#322d99;
     }
 `
-const ButtonPokedex = styled.button `
+const ButtonPokedex = styled.button`
     width:24vw;
     background-color:transparent;
     color:white;
@@ -55,7 +56,7 @@ const ButtonPokedex = styled.button `
         color:#322d99;
     }
 `
-const PokeballBox =styled.div `
+const PokeballBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +70,7 @@ const PokeballBox =styled.div `
     box-sizing: border-box;
     }
 `
-const PokeballIcon = styled.div `
+const PokeballIcon = styled.div`
     position: absolute;
     width: 2em;
     height: 2em;
@@ -104,27 +105,26 @@ const PokeballIcon = styled.div `
         background-color: #fff;
     }
 `
-const ButtonPokeball = styled.div `
+const ButtonPokeball = styled.div`
     display:flex;
 
 `
 // --------------------------------------------------------------------------------------------------------------
 const Header = () => {
-    return(
-    <HeaderStyled >
-        <LogoStyled src={Logo}/>
-        <DivButton>
+    return (
+        <HeaderStyled >
+            <Link to="/"> <LogoStyled src={Logo} /></Link>
+            <DivButton>
                 <PokeballBox>
-                    <PokeballIcon></PokeballIcon>
                 </PokeballBox>
-                <ButtonPokedex>Minha Pokédex
+                <ButtonPokedex><Link to='/pokedex'>Minha Pokédex</Link>
                     {/* <ButtonPokeball> */}
                     {/* </ButtonPokeball> */}
                 </ButtonPokedex>
-            <ButtonHome>Home</ButtonHome>
-        </DivButton>
-    </HeaderStyled>
-) 
+                <ButtonHome>Home</ButtonHome>
+            </DivButton>
+        </HeaderStyled>
+    )
 }
 
 export default Header;
