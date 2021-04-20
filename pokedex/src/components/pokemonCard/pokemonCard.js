@@ -3,6 +3,8 @@ import { CardContainer, ContainerButton, ImgPokemon } from "./styled";
 import { ButtonAdd, ButtonDetails } from "../../constants/buttons";
 
 const PokemonCard = () => {
+
+
   return (
     <CardContainer>
       <p>"Pokemon.nome"</p>
@@ -12,7 +14,7 @@ const PokemonCard = () => {
       />
 
       <ContainerButton>
-        <ButtonAdd>'Remover/Adiciona'</ButtonAdd>
+        <ButtonAdd >'Remover/Adiciona'</ButtonAdd>
         <ButtonDetails>Ver detalhes</ButtonDetails>
       </ContainerButton>
     </CardContainer>

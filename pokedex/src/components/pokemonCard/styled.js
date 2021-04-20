@@ -9,15 +9,29 @@ export const CardContainer = styled.div`
   background-color: ${themeCard};
   border: 1px solid ${themeCardBorder};
   border-radius: 10px;
-  width: 258px ;
-  height:320px ;
+  width: 278px ;
+  height:350px ;
   text-align: center;
   text-transform: uppercase; 
   color: rgb(77, 75, 73);
+  box-shadow: 6px 4px 10px ${themeCardBorder};
   &:hover{
   transform: scale(1.05);
-  
   }
+
+
+animation: mymove 1.5s;
+::after{
+  @keyframes mymove {
+  100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  0%{
+      transform: translateX(1400px)  translateY(0);
+      opacity: 0.4;
+  }
+}}
 `
 
 export const ImgPokemon = styled.img`
