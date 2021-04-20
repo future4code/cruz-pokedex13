@@ -1,6 +1,7 @@
 import React from "react";
 import { CardContainer, ContainerButton, ImgPokemon } from "./styled";
 import { ButtonAdd, ButtonDetails } from "../../constants/buttons";
+import { Link } from 'react-router-dom'
 
 const PokemonCard = () => {
 
@@ -15,9 +16,9 @@ const PokemonCard = () => {
 
       <ContainerButton>
         <ButtonAdd >'Remover/Adiciona'</ButtonAdd>
-        <ButtonDetails>Ver detalhes</ButtonDetails>
+        <ButtonDetails><Link to='/details'>Ver detalhes</Link></ButtonDetails>
       </ContainerButton>
-    </CardContainer>
+    </CardContainer >
   );
 };
 export default PokemonCard;
