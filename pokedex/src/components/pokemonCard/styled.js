@@ -17,9 +17,21 @@ export const CardContainer = styled.div`
   box-shadow: 6px 4px 10px ${themeCardBorder};
   &:hover{
   transform: scale(1.05);
-
-  
   }
+
+
+animation: mymove 1.5s;
+::after{
+  @keyframes mymove {
+  100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  0%{
+      transform: translateX(1400px)  translateY(0);
+      opacity: 0.4;
+  }
+}}
 `
 
 export const ImgPokemon = styled.img`

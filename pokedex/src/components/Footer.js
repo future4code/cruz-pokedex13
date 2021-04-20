@@ -6,9 +6,9 @@ const FooterStyled = styled.div `
     justify-content:center;
     align-items:center;
     width:100vw;
-    height:231px;
+    height:10vh;
     background-color:#1f1f1f;
-    margin-top:48vh;
+    
 `
 const TextFooter = styled.div `
     color:#525252;
