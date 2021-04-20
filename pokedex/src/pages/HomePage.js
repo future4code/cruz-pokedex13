@@ -14,7 +14,6 @@ const HomePage = () => {
 
  
 
-const HomePage = () => {
   return (
     <>
 
