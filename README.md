@@ -1,4 +1,3 @@
-![Banner_GITHUB_Site (2)](https://user-images.githubusercontent.com/52434685/115290257-b6f25d00-a129-11eb-9a35-94fe210892f4.png)
 # POKEDEX
 
 Nome dos integrantes: 

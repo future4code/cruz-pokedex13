@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
 
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import React, { useState } from 'react';
 import PokemonCard from '../components/pokemonCard/pokemonCard'
 import styled from 'styled-components'
 
@@ -8,16 +10,25 @@ const HomePage = () => {
   
 
 
+
+
  
 
+const HomePage = () => {
   return (
     <>
 
+<Header/>
       <PokeListContainer>
              {pokeList.map((poke) => {
                 return <PokemonCard  /> 
              })}
       </PokeListContainer>
+
+<Footer/>
+      
+     
+      
 
     </>
   )
