@@ -1,7 +1,9 @@
 import React from "react";
 import styled from 'styled-components'
 import Logo from '../img/logo.png'
-import { Link } from 'react-router-dom'
+import { useHistory, Link } from "react-router-dom";
+import { goToPokedexPage } from "../routes/coordinator"
+
 
 const HeaderStyled = styled.div`
     display:flex;
@@ -111,17 +113,17 @@ const ButtonPokeball = styled.div`
 `
 // --------------------------------------------------------------------------------------------------------------
 const Header = () => {
+    const history = useHistory();
     return (
         <HeaderStyled >
             <Link to="/"> <LogoStyled src={Logo} /></Link>
             <DivButton>
                 <PokeballBox>
                 </PokeballBox>
-                <ButtonPokedex><Link to='/pokedex'>Minha Pokédex</Link>
+                <ButtonPokedex onClick={() => goToPokedexPage(history)}>Minha Pokédex
                     {/* <ButtonPokeball> */}
                     {/* </ButtonPokeball> */}
                 </ButtonPokedex>
-                <ButtonHome>Home</ButtonHome>
             </DivButton>
         </HeaderStyled>
     )

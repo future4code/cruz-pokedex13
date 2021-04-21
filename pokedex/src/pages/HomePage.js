@@ -4,13 +4,15 @@ import Footer from '../components/Footer'
 import React, { useContext, useState } from 'react';
 import PokemonCard from '../components/pokemonCard/pokemonCard'
 import styled from 'styled-components'
-import GlobalStateContext from '../GlobalState/GlobalContaxt';
+import GlobalStateContext from '../GlobalState/GlobalContext';
+import { useHistory } from "react-router-dom";
 
 
 const HomePage = () => {
   const [show, setShow] = useState(true);
-  const {pokemons, pokedex, setPokedex} = useContext(GlobalStateContext);
+  const { pokemons, pokedex, setPokedex } = useContext(GlobalStateContext);
   const [baba, setbaba] = useState('babinha')
+  const history = useHistory();
 
   const estadoshow = () => {
     show ? setShow(false) : setShow(true)
@@ -19,7 +21,7 @@ const HomePage = () => {
   const screen = (
     show ? <PokeListContainer>
       {pokemons.map((pokemon) => {
-        return <PokemonCard key={pokemon.name} pokemon={pokemon}/>
+        return <PokemonCard key={pokemon.name} pokemon={pokemon} />
       })}
     </PokeListContainer> : <div>Carregando ... </div>
   )
@@ -30,7 +32,7 @@ const HomePage = () => {
   //     if (poke.id === pokemons.id){
   //      const newpoke.push(poke)  
   //     } 
-      
+
   //     setPokedex(newpoke)
   //   })
   // )

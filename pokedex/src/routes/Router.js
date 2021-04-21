@@ -15,9 +15,10 @@ const Router = () => {
           <PokedexPage />
         </Route>
 
-        <Route exact path='/details'>
-          <DetailsPage/>
-        </Route>
+        <Route
+          exact path="/pokemon/:name/:telaPokedex?"
+          component={DetailsPage}
+        />
 
         <Route>
           <div>Página não encontrada</div>
@@ -28,3 +29,10 @@ const Router = () => {
 };
 
 export default Router;
+
+// deveria estar: '/details/:id' para passar os params
+//     <Route
+//exact
+//path="/pokemon/:name/:telaPokedex?"
+//component={PokemonDetailScreen}
+// />
