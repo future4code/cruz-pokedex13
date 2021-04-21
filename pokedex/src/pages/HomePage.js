@@ -8,9 +8,9 @@ import GlobalStateContext from '../GlobalState/GlobalContaxt';
 
 
 const HomePage = () => {
-  
   const [show, setShow] = useState(true);
-  const {pokemons} = useContext(GlobalStateContext);
+  const {pokemons, pokedex, setPokedex} = useContext(GlobalStateContext);
+  const [baba, setbaba] = useState('babinha')
 
   const estadoshow = () => {
     show ? setShow(false) : setShow(true)
@@ -24,6 +24,18 @@ const HomePage = () => {
     </PokeListContainer> : <div>Carregando ... </div>
   )
 
+
+  // const addPokedex = (
+  //   pokemons.map((poke) => {
+  //     if (poke.id === pokemons.id){
+  //      const newpoke.push(poke)  
+  //     } 
+      
+  //     setPokedex(newpoke)
+  //   })
+  // )
+
+
   return (
     <>
 
@@ -31,7 +43,7 @@ const HomePage = () => {
       <button onClick={() => estadoshow()}>ENTRA/SAI</button>
       {screen}
 
-      <Footer />
+      <Footer show={show} />
 
     </>
   )
