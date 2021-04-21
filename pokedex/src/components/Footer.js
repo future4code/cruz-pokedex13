@@ -5,9 +5,10 @@ const FooterStyled = styled.div `
     display:flex;
     justify-content:center;
     align-items:center;
-    width:100vw;
+    width:98.5vw;
     height:10vh;
     background-color:#1f1f1f;
+    margin-top:4vh;
     
 `
 const TextFooter = styled.div `

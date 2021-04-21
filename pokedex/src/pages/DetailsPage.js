@@ -9,7 +9,6 @@ import GlobalStateContext from "../GlobalState/GlobalContext"
 import axios from 'axios'
 
 
-
 const MainContainer = styled.div`
 height:80vh;
 width:100%;
@@ -17,7 +16,6 @@ display:flex;
 justify-content: space-between;
 align-items:center;
 `
-
 const ContainerLeft = styled.div`
 height:80%;
 width:50%;
@@ -26,7 +24,6 @@ const ContainerRight = styled.div`
 height:80%;
 width: 50%;
 display:flex;
-
 `
 const Title = styled.h1`
 margin-bottom:3%;
