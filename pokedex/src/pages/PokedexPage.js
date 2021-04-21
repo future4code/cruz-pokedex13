@@ -6,8 +6,7 @@ import GlobalStateContext from "../GlobalState/GlobalContext";
 import { PokeListContainer } from "./HomePage";
 import PokemonCard from "../components/pokemonCard/pokemonCard";
 import { goToDetailsPage } from "../routes/coordinator"
-// import { PokeListContainer } from "./HomePage";
-// import PokemonCard from "../components/pokemonCard/pokemonCard";
+
 
 const PokedexPage = () => {
   const { pokedex } = useContext(GlobalStateContext);
@@ -16,16 +15,12 @@ const PokedexPage = () => {
   return (
     <>
       <Header />
-      <div>Pokedex</div>
       <PokeListContainer>
         {pokedex.map((poke) => {
           return <PokemonCard key={poke.name} GoPokedex pokemon={poke} />
           // button deveria estar dentro do mapa pra pegar o poke.name
         })}
-
       </PokeListContainer>
-
-      <button onClick={() => goToDetailsPage(history)}>Detalhes</button>
       <Footer />
     </>
   )

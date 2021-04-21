@@ -9,11 +9,12 @@ const HeaderStyled = styled.div`
     display:flex;
     justify-content:space-between;
     background-color:#ee5253;
-    width:100vw;
+    width:98.5vw;
     height:12vh;
     margin-top:0px;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
     'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom:4vh;
 `
 const LogoStyled = styled.img`
     width:12vw;

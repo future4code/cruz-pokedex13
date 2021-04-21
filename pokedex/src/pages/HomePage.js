@@ -11,12 +11,11 @@ import { useHistory } from "react-router-dom";
 const HomePage = () => {
   const [show, setShow] = useState(true);
   const { pokemons, pokedex, setPokedex } = useContext(GlobalStateContext);
-  const [baba, setbaba] = useState('babinha')
   const history = useHistory();
 
-  const estadoshow = () => {
-    show ? setShow(false) : setShow(true)
-  }
+  // const estadoshow = () => {
+  //   show ? setShow(false) : setShow(true)
+  // }
 
   const screen = (
     show ? <PokeListContainer>
@@ -26,30 +25,13 @@ const HomePage = () => {
     </PokeListContainer> : <div>Carregando ... </div>
   )
 
-
-  // const addPokedex = (
-  //   pokemons.map((poke) => {
-  //     if (poke.id === pokemons.id){
-  //      const newpoke.push(poke)  
-  //     } 
-
-  //     setPokedex(newpoke)
-  //   })
-  // )
-
-
   return (
     <>
-
       <Header />
-      <button onClick={() => estadoshow()}>ENTRA/SAI</button>
       {screen}
-
-      <Footer show={show} />
-
+      <Footer />
     </>
   )
-
 };
 
 export default HomePage;
@@ -65,6 +47,5 @@ export const PokeListContainer = styled.div`
   grid-column-gap:2vw;
   grid-row-gap:7vh;
   overflow:auto;
-  height:95vh;
-
+  height:100vh;
 `
