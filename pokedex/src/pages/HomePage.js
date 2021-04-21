@@ -27,14 +27,11 @@ const HomePage = () => {
 
   return (
     <>
-
       <Header />
       {screen}
       <Footer />
-
     </>
   )
-
 };
 
 export default HomePage;
