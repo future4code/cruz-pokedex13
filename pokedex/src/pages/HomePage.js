@@ -47,6 +47,5 @@ export const PokeListContainer = styled.div`
   grid-column-gap:2vw;
   grid-row-gap:7vh;
   overflow:auto;
-  height:95vh;
-
+  height:100vh;
 `

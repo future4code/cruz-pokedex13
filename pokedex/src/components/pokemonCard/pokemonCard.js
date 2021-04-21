@@ -50,9 +50,7 @@ const PokemonCard = ({ pokemon, GoPokedex }) => {
   return (
     <CardContainer>
       <p>{pokemon.name}</p>
-      <ImgPokemon src={pokemon && pokemon.sprites.front_default} alt={pokemon.name} />
-
-
+      <ImgPokemon src={pokemon && pokemon.sprites.front_default} alt={pokemon.name}/>
       <ContainerButton>
         <ButtonAdd onClick={GoPokedex ? removePokedex : addToPokedex}>{GoPokedex ? 'Remove from Pokédex' : 'Add to Pokédex'}</ButtonAdd>
         <ButtonDetails onClick={() => goToDetailsPage(history, pokemon.name, GoPokedex)}>Details</ButtonDetails>
