@@ -5,13 +5,11 @@ Nome dos integrantes:
 - Kethreen Gonçalves
 - Maria Eduarda Auler
 
-Link do Surge: www.link.com.br
-Link do XD ; https://xd.adobe.com/view/09c5b20d-c678-4c6e-97dc-cd58132b1c45-5c96/
+Link do Surge: http://pokedex13-cruz.surge.sh/
+Link do XD  https://xd.adobe.com/view/09c5b20d-c678-4c6e-97dc-cd58132b1c45-5c96/ ;
 
 O que funciona:
-- Item 1
-- Item 2
+-Todas as funcionalidades solicitadas
 
 O que não funciona: 
-- Item 3
-- Item 4
+- Nada
