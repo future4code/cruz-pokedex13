@@ -8,6 +8,9 @@ const GlobalState = (props) => {
     const [pokemons, setPokemons] = useState([]); 
     const [pokedex, setPokedex] = useState([])
   
+    
+    
+
   console.log(pokemons, "poke") 
   console.log(pokemonNames, "nomes") 
   
@@ -36,6 +39,7 @@ const GlobalState = (props) => {
                 return a.id - b.id; 
               });
               setPokemons(orderedList); 
+          
             }
           })
           .catch((error) => {
