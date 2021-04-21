@@ -1,4 +1,5 @@
-# POKEDEX
+![Capas Github](https://user-images.githubusercontent.com/52434685/115599641-3874f700-a2b2-11eb-842f-263b22b00be2.png)
+
 
 ### 👩🏽 Quem Faz 
 - Fayra Miranda
