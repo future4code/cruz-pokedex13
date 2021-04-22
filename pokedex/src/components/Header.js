@@ -9,18 +9,16 @@ const HeaderStyled = styled.div`
     display:flex;
     justify-content:space-between;
     background-color:#ee5253;
-    width:98.5vw;
+    width:100%;
     height:12vh;
-    margin-top:0px;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
     'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom:4vh;
 `
 const LogoStyled = styled.img` 
     width:clamp(120px,12vw,400px);
     height:9vh;
-    margin-top:10px;
-    margin-left:64px;
+    padding-top:10px;
+    padding-left:64px;
 `
 const DivButton = styled.div`
     display:flex;
@@ -108,10 +106,6 @@ const PokeballIcon = styled.div`
         background-color: #fff;
     }
 `
-const ButtonPokeball = styled.div`
-    display:flex;
-
-`
 // --------------------------------------------------------------------------------------------------------------
 const Header = () => {
     const history = useHistory();
@@ -121,9 +115,7 @@ const Header = () => {
             <DivButton>
                 <PokeballBox>
                 </PokeballBox>
-                <ButtonPokedex onClick={() => goToPokedexPage(history)}>Minha Pokédex
-                    {/* <ButtonPokeball> */}
-                    {/* </ButtonPokeball> */}
+                <ButtonPokedex onClick={() => goToPokedexPage(history)}>My Pokédex
                 </ButtonPokedex>
             </DivButton>
         </HeaderStyled>
