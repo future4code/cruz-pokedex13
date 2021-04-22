@@ -9,22 +9,16 @@ import { useHistory } from "react-router-dom";
 
 
 const HomePage = () => {
-  const [show, setShow] = useState(true);
   const { pokemons, pokedex, setPokedex } = useContext(GlobalStateContext);
   const history = useHistory();
 
-  // const estadoshow = () => {
-  //   show ? setShow(false) : setShow(true)
-  // }
-
   const screen = (
-    show ? <PokeListContainer>
+    <PokeListContainer>
       {pokemons.map((pokemon) => {
         return <PokemonCard key={pokemon.name} pokemon={pokemon} />
       })}
-    </PokeListContainer> : <div>Carregando ... </div>
+    </PokeListContainer>
   )
-
   return (
     <>
       <Header />

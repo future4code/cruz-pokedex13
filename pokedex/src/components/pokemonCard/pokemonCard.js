@@ -16,8 +16,6 @@ const PokemonCard = ({ pokemon, GoPokedex }) => {
     const orderedPokemons = newPokeList.sort((a, b) => {
       return a.id - b.id
     })
-
-
     const newPokedexList = [...pokedex, pokemon]
     const orderedPokedex = newPokedexList.sort((a, b) => {
       return a.id - b.id
@@ -25,32 +23,24 @@ const PokemonCard = ({ pokemon, GoPokedex }) => {
     setPokedex(orderedPokedex)
     setPokemons(orderedPokemons)
   }
-
   const removePokedex = () => {
-
     const pokeIndex = pokedex.findIndex((item) => item.name === pokemon.name)
     const newPokedexList = [...pokedex]
     newPokedexList.splice(pokeIndex, 1)
-
     const orderedPokedex = newPokedexList.sort((a, b) => {
       return a.id - b.id
     })
-
     const newPokemonsList = [...pokemons, pokemon]
     const orderedPokemons = newPokemonsList.sort((a, b) => {
       return a.id - b.id
     })
-
     setPokedex(orderedPokedex)
     setPokemons(orderedPokemons)
-
   }
-
-
   return (
     <CardContainer>
       <p>{pokemon.name}</p>
-      <ImgPokemon src={pokemon && pokemon.sprites.front_default} alt={pokemon.name}/>
+      <ImgPokemon src={pokemon && pokemon.sprites.front_default} alt={pokemon.name}yarn />
       <ContainerButton>
         <ButtonAdd onClick={GoPokedex ? removePokedex : addToPokedex}>{GoPokedex ? 'Remove from Pokédex' : 'Add to Pokédex'}</ButtonAdd>
         <ButtonDetails onClick={() => goToDetailsPage(history, pokemon.name, GoPokedex)}>Details</ButtonDetails>
