@@ -7,10 +7,6 @@ const GlobalState = (props) => {
   const [pokemonNames, setPokemonNames] = useState([]);
   const [pokemons, setPokemons] = useState([]);
   const [pokedex, setPokedex] = useState([])
-
-
-
-
   console.log(pokemons, "poke")
   console.log(pokemonNames, "nomes")
 
@@ -50,10 +46,8 @@ const GlobalState = (props) => {
 
 
   return (
-
     <GlobalStateContext.Provider value={{ pokemons, setPokemons, pokedex, setPokedex }}>
       {props.children}
-
     </GlobalStateContext.Provider>
   )
 };

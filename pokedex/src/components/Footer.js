@@ -7,9 +7,7 @@ const FooterStyled = styled.div `
     align-items:center;
     width:98.5vw;
     height:10vh;
-    background-color:#1f1f1f;
-    margin-top:4vh;
-    
+    background-color:#1f1f1f;  
 `
 const TextFooter = styled.div `
     color:#525252;

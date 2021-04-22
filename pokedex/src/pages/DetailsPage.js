@@ -7,31 +7,52 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import GlobalStateContext from "../GlobalState/GlobalContext"
 import axios from 'axios'
+import { themeFooter } from "../constants/colors";
 
 
 const MainContainer = styled.div`
-height:80vh;
+height:100%;
 width:100%;
 display:flex;
 justify-content: space-between;
 align-items:center;
+margin-bottom:5%;
+@media(max-width:800px){
+  flex-direction:column;
+  justify-content:center;
+  height:100%;
+}
 `
 const ContainerLeft = styled.div`
 height:80%;
 width:50%;
+@media(max-width:800px){
+  width:100%;
+}
 `
 const ContainerRight = styled.div`
-height:80%;
+height:100%;
 width: 50%;
 display:flex;
+@media(max-width:800px){
+  font-size:12px;
+  flex-direction:row;
+  flex-wrap:wrap;
+  margin:auto;
+  width:67%;
+}
 `
 const Title = styled.h1`
 margin-bottom:3%;
 text-align:center;
-font-family: poppins;
-color:darkgray;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+color:${themeFooter};
 :hover{
   text-decoration:underline #FEB437;
+}
+@media(max-width:800px){
+  font-size:24px;
 }
 `
 const FrontBox = styled.div`
@@ -42,8 +63,8 @@ justify-content:center;
 margin-left: auto;
 margin-right: auto;
 margin-bottom: 3%;
-height:40%;
-width:30%;
+height:clamp(250px,40%,500px);
+width:clamp(250px,30%,500px);
 -webkit-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
 -moz-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
 box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
@@ -63,22 +84,32 @@ align-items:center;
 justify-content:center;
 margin-left: auto;
 margin-right: auto;
-height:40%;
-width:30%;
+height:clamp(250px,40%,500px);
+width:clamp(250px,30%,500px);
 -webkit-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
 -moz-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
 box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
+@media (max-width:800px){
+  margin-top:8%;
+}
 `
 const Description = styled.div`
 text-align:center;
 background-color: #edb4b4;
-height: 85%;
+height: 80vh;
 width:35%;
 margin-right:5%;
 margin-top: 10%;
 -webkit-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
 -moz-box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
 box-shadow: -1px 2px 16px 0px rgba(0,0,0,0.34);
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+'Helvetica Neue', sans-serif;
+@media(max-width:800px){
+  height:64%;
+  width:100%;
+  margin-right:0;
+}
 `
 
 const DetailsPage = () => {
@@ -146,8 +177,8 @@ const DetailsPage = () => {
                   );
                 })}</Description></ContainerRight>
         </MainContainer>
-
       )}
+      <Footer/>
     </>
 
   )

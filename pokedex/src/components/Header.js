@@ -16,8 +16,8 @@ const HeaderStyled = styled.div`
     'Open Sans', 'Helvetica Neue', sans-serif;
     margin-bottom:4vh;
 `
-const LogoStyled = styled.img`
-    width:12vw;
+const LogoStyled = styled.img` 
+    width:clamp(120px,12vw,400px);
     height:9vh;
     margin-top:10px;
     margin-left:64px;
