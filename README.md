@@ -13,6 +13,8 @@
 
 ### ⛏ Funcionalidades 
 - Todas as funcionalidades solicitadas e responsividade
+
+
 ![WhatsApp Video 2021-04-22 at 17 55 58](https://user-images.githubusercontent.com/52434685/115784545-a4c82700-a394-11eb-8c6e-acde42e35f8c.gif)
 
 
