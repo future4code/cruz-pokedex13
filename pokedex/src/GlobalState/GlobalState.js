@@ -29,8 +29,6 @@ const GlobalState = (props) => {
       .catch((error) => {
         console.log(error.message);
       });
-      // console.log("chamou", chamou)
-      console.log(count)
   };
 
   useEffect(() => {
@@ -56,6 +54,7 @@ const GlobalState = (props) => {
   return (
     <GlobalStateContext.Provider
       value={{
+        pokemonNames,
         pokemons,
         setPokemons,
         pokedex,

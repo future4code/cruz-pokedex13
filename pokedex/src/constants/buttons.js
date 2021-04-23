@@ -39,7 +39,7 @@ export const ButtonPrevNextPage = styled.button`
   border-radius: 5px;
   align-self:center;
   height:4vh;
-  width:clamp( 50px , 100% , 150px);
+  width:clamp( 50px , 100% , 110px);
   color: white;
   background-color: ${themePrimary};
   :hover{
