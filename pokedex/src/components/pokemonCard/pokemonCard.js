@@ -50,6 +50,3 @@ const PokemonCard = ({ pokemon, GoPokedex }) => {
   );
 };
 export default PokemonCard;
-
-// deveria passar o pokemon.name aqui e na pokedex
-// goToPokemonDetail(history, props.poke.name, props.isPokedex)
