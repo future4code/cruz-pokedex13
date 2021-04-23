@@ -29,10 +29,3 @@ const Router = () => {
 };
 
 export default Router;
-
-// deveria estar: '/details/:id' para passar os params
-//     <Route
-//exact
-//path="/pokemon/:name/:telaPokedex?"
-//component={PokemonDetailScreen}
-// />
