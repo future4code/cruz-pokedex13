@@ -6,6 +6,7 @@ import PokemonCard from '../components/pokemonCard/pokemonCard'
 import styled from 'styled-components'
 import GlobalStateContext from '../GlobalState/GlobalContext';
 import { useHistory } from "react-router-dom";
+import Pagination from '../routes/pagination';
 
 
 const HomePage = () => {
@@ -22,6 +23,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
+      <Pagination/>
       {screen}
       <Footer />
     </>
