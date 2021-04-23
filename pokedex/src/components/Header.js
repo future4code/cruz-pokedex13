@@ -28,20 +28,7 @@ const DivButton = styled.div`
     width:20vw;
     height:7vh;
 `
-const ButtonHome = styled.button`
-    background-color:transparent;
-    color:white;
-    font-weight:500;
-    font-size:1.12rem;
-    outline:none;
-    border:none;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-    'Open Sans', 'Helvetica Neue', sans-serif;
-    cursor: pointer;
-    &:active{
-        color:#322d99;
-    }
-`
+
 const ButtonPokedex = styled.button`
     width:24vw;
     background-color:transparent;
@@ -71,41 +58,7 @@ const PokeballBox = styled.div`
     box-sizing: border-box;
     }
 `
-const PokeballIcon = styled.div`
-    position: absolute;
-    width: 2em;
-    height: 2em;
-    background-color: transparent;
-    border: .2em solid #333;
-    border-radius: 50%;
-    transition: .5s ease transform;
-    &:hover {
-        transform: rotate(360deg);
-    }
-    &:before,
-    &:after {
-        content: "";
-        alt: attr(data-alt);
-        position: absolute;
-    }
-    &:before {
-        top: calc(50% - 0.1em);
-        width: 100%;
-        height: 0.2em;
-        background-color: #333;
-    }
-    &:after {
-        width: .8em;
-        height: .8em;
-        top: calc(50% - .4em);
-        left: calc(50% - .4em);
-        
-        border-radius: 50%;
-        border: .2em solid #333;
-        color: #fff;
-        background-color: #fff;
-    }
-`
+
 // --------------------------------------------------------------------------------------------------------------
 const Header = () => {
     const history = useHistory();
