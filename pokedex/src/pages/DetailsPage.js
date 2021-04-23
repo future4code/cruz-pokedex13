@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 import React, { useContext, useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import GlobalStateContext from "../GlobalState/GlobalContext";
 import axios from "axios";
 import { themeFooter } from "../constants/colors";
@@ -110,7 +110,6 @@ const Description = styled.div`
 `;
 
 const DetailsPage = () => {
-  const history = useHistory();
   const { name, telaPokedex } = useParams();
   const { pokemons, pokedex } = useContext(GlobalStateContext);
   const [selectedPokemon, setSelectedPokemon] = useState({});
@@ -135,7 +134,7 @@ const DetailsPage = () => {
     } else {
       setSelectedPokemon(current);
     }
-  }, []);
+  }, [name, pokemons, telaPokedex, pokedex]);
 
   return (
     <>
