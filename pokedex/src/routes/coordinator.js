@@ -5,9 +5,6 @@ export const goToHomePage = (history) => {
     history.push("/")
 }
 
-
-//`/details/${name}`
-
 export const goToDetailsPage = (history, name, isPokedex) => {
     console.log("ispoke", isPokedex);
     isPokedex
