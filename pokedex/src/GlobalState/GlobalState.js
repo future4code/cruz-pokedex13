@@ -8,8 +8,8 @@ const GlobalState = (props) => {
   const [pokemons, setPokemons] = useState([]);
   const [pokedex, setPokedex] = useState([]);
   const [currentPageUrl, setCurrentPageUrl] = useState(`${BASE_URL}`);
-  const [nextPageUrl, setNextPageUrl] = useState();
-  const [prevPageUrl, setPrevPageUrl] = useState();
+  const [nextPageUrl, setNextPageUrl] = useState("");
+  const [prevPageUrl, setPrevPageUrl] = useState("");
   const [count, setCount] = useState(0);
   // const [chamou, setChamou]=useState(20)
   
@@ -38,7 +38,7 @@ const GlobalState = (props) => {
         .get(item.url)
         .then((response) => {
           newList.push(response.data);
-          if (newList.length === 20 ) {
+          if (newList.length === 20 || nextPageUrl === null ) {
             const orderedList = newList.sort((a, b) => {
               return a.id - b.id;
             });

@@ -8,6 +8,7 @@ export default function Pagination({ gotoNextPage, gotoPrevPage }) {
   const {setCurrentPageUrl, nextPageUrl, prevPageUrl, count, setCount} = useContext(GlobalStateContext)
 
     function gotoNextPage() {
+        console.log(count)
         if(count>=0 && count<= 55){
             setCount(count+1)
             setCurrentPageUrl(nextPageUrl);
@@ -15,7 +16,7 @@ export default function Pagination({ gotoNextPage, gotoPrevPage }) {
             setCurrentPageUrl(`${BASE_URL}`);
         }
       }
-      
+    
       function gotoPrevPage() {
         if (count > 0){
             setCount(count-1)
