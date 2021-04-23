@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import GlobalStateContext from "../GlobalState/GlobalContext";
 import { PokeListContainer } from "./HomePage";
 import PokemonCard from "../components/pokemonCard/pokemonCard";
-
+import loading from "../img/Pokebolas-17369.gif"
 const PokedexPage = () => {
   const { pokedex } = useContext(GlobalStateContext);
   const history = useHistory();
@@ -14,10 +14,9 @@ const PokedexPage = () => {
     <>
       <Header />
       <PokeListContainer>
-        {pokedex.map((poke) => {
-          return <PokemonCard key={poke.name} GoPokedex pokemon={poke} />;
-          // button deveria estar dentro do mapa pra pegar o poke.name
-        })}
+        {pokedex.length != 0 ? pokedex.map((poke) => {
+          return <PokemonCard key={poke.name} GoPokedex pokemon={poke} />
+        }) : (<img src={loading} alt="loading Pokedex"/>)}
       </PokeListContainer>
       <Footer />
     </>

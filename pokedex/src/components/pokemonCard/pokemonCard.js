@@ -13,6 +13,7 @@ const PokemonCard = ({ pokemon, GoPokedex }) => {
     const pokeNew = pokemons.findIndex((item) => item.name === pokemon.name)
     const newPokeList = [...pokemons]
     newPokeList.splice(pokeNew, 1)
+    alert('Pokémon adicionado com sucesso! 💥')
     const orderedPokemons = newPokeList.sort((a, b) => {
       return a.id - b.id
     })
